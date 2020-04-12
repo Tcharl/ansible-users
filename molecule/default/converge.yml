@@ -2,6 +2,6 @@
 - name: Converge
   hosts: all
   tasks:
-    - name: "Include hostusers"
+    - name: "Include Ansible users"
       include_role:
-        name: "hostusers"
+        name: "ansible-users"
