@@ -3,7 +3,6 @@ from __future__ import absolute_import
 import os
 import pytest
 
-
 def pytest_runtest_setup(item):
     """Run tests only when under molecule with testinfra installed."""
     try:

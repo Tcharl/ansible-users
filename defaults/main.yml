@@ -1,2 +1,4 @@
 ---
 # defaults file for hostusers
+system_user_default_create_home: no
+system_user_default_home: "/"
