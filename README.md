@@ -12,6 +12,16 @@ Role Variables
 --------------
 
 Exactly the same as [robertdebock.users](https://galaxy.ansible.com/robertdebock/users): this role is totally dumb.
+In addition to that roles variables, we have added the notion of system users, ex:
+
+```yaml
+    systemusers_user_list:
+      - name: systemuser
+        group: cmordante
+        groups: wheel
+        create_home: yes # defaults to false
+        home: "/system" # defaults to "/" 
+```
 
 Dependencies
 ------------
