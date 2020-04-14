@@ -1,5 +1,6 @@
 """Role testing files using testinfra."""
 
+
 def test_user_exists(host):
     command = """sudo cat /etc/passwd | grep -c 'cmordant'"""
     cmd = host.run(command)
