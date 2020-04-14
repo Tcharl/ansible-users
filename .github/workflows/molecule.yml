@@ -55,22 +55,10 @@ jobs:
         sudo pip3 install wheel
         sudo pip3 install docker molecule testinfra
 
-    - name: create molecule vm
-      run: |
-        molecule create
-
     - name: install prereq
       run: |
         ./configure
 
-    - name: converge molecule vm
+    - name: execute molecule
       run: |
-        molecule converge
-
-    - name: verify
-      run: |
-        molecule verify
-
-    - name: teardown
-      run: |
-        molecule destroy
+        molecule test
