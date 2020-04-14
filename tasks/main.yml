@@ -1,2 +1,11 @@
 ---
-# tasks file for hostusers
+# tasks file for ansible-users
+
+- name: ansible-users | loop over systemusers_user_list
+  include: system-users.yml
+  loop: "{{ systemusers_user_list }}"
+  loop_control:
+    label: "{{ user.name }}"
+    loop_var: user
+  when:
+    - systemusers_user_list is defined
