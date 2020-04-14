@@ -53,7 +53,7 @@ jobs:
         sudo apt update
         sudo apt -y install python3-setuptools python3 python3-pip docker
         sudo pip3 install wheel
-        sudo pip3 install docker molecule testinfra
+        sudo pip3 install docker molecule testinfra, yamllint, ansible-lint, flake8
 
     - name: install prereq
       run: |
